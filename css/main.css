@@ -1,6 +1,6 @@
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: rgb(0, 0, 0);
+  background-color: #4B0082;
   overflow: hidden;
 }
 
@@ -17,7 +17,7 @@
 
 /* Hover effect using a CSS function */
 :root {
-  --hover-bg: #ddd;
+  --hover-bg: #1E90FF;
   --hover-color: black;
 }
 
@@ -28,7 +28,7 @@
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #002fff;
+  background-color: #E81B39;
   color: white;
 }
 
@@ -41,6 +41,44 @@
 .content {
   padding: 14px;
   font-size: 22px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove spacing between table cells */
+  margin-top: 20px; /* Add space above the table */
+}
+
+th, td {
+  border: 1px solid #ddd; /* Add borders to table cells */
+  padding: 12px; /* Add padding for better spacing */
+  text-align: left; /* Align text to the left */
+}
+
+th {
+  background-color: #4B0082; /* Match the navigation bar color */
+  color: white; /* White text for headers */
+  font-size: 20px; /* Slightly larger font for headers */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternate row colors for better readability */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Responsive Table for Small Screens */
+@media screen and (max-width: 800px) {
+  table {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  th, td {
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
 }
 
 /* When the screen is less than 800 pixels wide */
@@ -78,9 +116,75 @@
     text-align: left;
   }
 }
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
 
 /* Utility CSS function for smooth hover effects */
 button,
 a {
   transition: all 0.3s ease;
 }
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
